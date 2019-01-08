@@ -370,7 +370,7 @@ public class BottomTabBar extends LinearLayout {
     public void setFobiddenTabs(int... indexs){
 
         for (int index:indexs){
-            if (index > mTabHost.getChildCount()-1 || index < 0) {
+            if (index > mTabHost.getTabWidget().getTabCount()-1 || index < 0) {
                 continue;
             }
             mTabHost.getTabWidget().getChildTabViewAt(index).setOnClickListener(new View.OnClickListener() {
@@ -390,7 +390,7 @@ public class BottomTabBar extends LinearLayout {
      */
     public void setForbidenTabsCustomClickListener(OnClickListener onClickListener,int... indexs){
         for (int index:indexs){
-            if (index > mTabHost.getChildCount()-1 || index < 0) {
+            if (index > mTabHost.getTabWidget().getTabCount()-1 || index < 0) {
                 continue;
             }
             mTabHost.getTabWidget().getChildTabViewAt(index).setOnClickListener(onClickListener);

@@ -45,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .setSpot(1, true)
                 .setSpot(2, true);
+        mBottomBar.setForbidenTabsCustomClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        },2,3,4,5,6);
     }
 
     public void setShowTabBar(boolean isShow){
