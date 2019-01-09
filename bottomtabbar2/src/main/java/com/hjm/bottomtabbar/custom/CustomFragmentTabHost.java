@@ -228,6 +228,12 @@ public class CustomFragmentTabHost extends TabHost implements TabHost.OnTabChang
     }
 
     @Override
+    public void clearAllTabs() {
+        super.clearAllTabs();
+        mTabs.clear();
+    }
+
+    @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
 

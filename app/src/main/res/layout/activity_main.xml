@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:hjm="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,4 +22,15 @@
         hjm:tab_unselected_color="#282828">
 
     </com.hjm.bottomtabbar.BottomTabBar>
-</LinearLayout>
+    <Button
+        android:id="@+id/mBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="方案一"/>
+    <Button
+        android:id="@+id/mBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="方案二"
+        android:layout_toRightOf="@id/mBtn1"/>
+</RelativeLayout>

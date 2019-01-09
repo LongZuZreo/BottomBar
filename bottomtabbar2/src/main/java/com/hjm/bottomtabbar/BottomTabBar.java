@@ -26,6 +26,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TabHost;
+import android.widget.TabWidget;
 import android.widget.TextView;
 
 import com.hjm.bottomtabbar.custom.CustomFragmentTabHost;
@@ -368,7 +369,6 @@ public class BottomTabBar extends LinearLayout {
      * @param indexs 禁止的索引
      */
     public void setFobiddenTabs(int... indexs){
-
         for (int index:indexs){
             if (index > mTabHost.getTabWidget().getTabCount()-1 || index < 0) {
                 continue;
@@ -443,6 +443,11 @@ public class BottomTabBar extends LinearLayout {
 
 
     /*=====================功能设置Start============================*/
+
+    public void clearAllTabs(){
+        mTabHost.clearAllTabs();
+        tabIdList.clear();
+    }
 
     /**
      * 设置当前Tab
